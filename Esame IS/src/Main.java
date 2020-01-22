@@ -29,8 +29,7 @@ public class Main {
 		
 		gestione.effettuaPagamento(c1, 2, LocalDate.of(2019, Month.DECEMBER, 20), StatoSpesa.ORDINATA);
 		gestione.generaReport();
-		System.out.println ("CIAO");
-		System.out.println ("CIAO");
+	
 	}
 
 }
