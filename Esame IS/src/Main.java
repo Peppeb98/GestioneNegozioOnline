@@ -21,13 +21,13 @@ public class Main {
 		c1.aggiungiAlCarrello(gestione.getCatalogo().get(0), 1);
 		c1.aggiungiAlCarrello(gestione.getCatalogo().get(1), 1);
 		c2.aggiungiAlCarrello(gestione.getCatalogo().get(0), 1);
-		c1.aggiungiAlCarrello(gestione.getCatalogo().get(0), 1);
+		c1.aggiungiAlCarrello(gestione.getCatalogo().get(1), 1);
 		
 		gestione.effettuaPagamento(c1, 1, LocalDate.of(2019, Month.DECEMBER, 28) , StatoSpesa.ORDINATA);
-		gestione.effettuaPagamento(c2,2, LocalDate.of(2019, Month.DECEMBER, 25), StatoSpesa.ORDINATA);
+		gestione.effettuaPagamento(c2, 2, LocalDate.of(2019, Month.DECEMBER, 25), StatoSpesa.ORDINATA);
 		
 		
-		gestione.effettuaPagamento(c1, 2, LocalDate.of(2019, Month.DECEMBER, 20), StatoSpesa.ORDINATA);
+		gestione.effettuaPagamento(c1, 2, LocalDate.of(2019, Month.DECEMBER, 31), StatoSpesa.ORDINATA);
 		gestione.generaReport();
 	
 	}

@@ -32,48 +32,20 @@ public class Gestione {
 		
 	}
 	
-	public void registraCliente(Cliente c) {
-		clienti.add(c);
-	}
-	
 	
 	public void effettuaPagamento(Cliente c,int id, LocalDate data, StatoSpesa s) {
 		  Spesa spesa = new Spesa(id,data,s,c.getCarrelli());  // sto prendendo il carrello che è un array di prodotti che ha anche la quantità
 		  if(clienti.contains(c)){
 		   c.aggiungiSpesa(spesa);
 		   c.count();
-		  /* for (int i=0 ; i<clienti.size() ; i++) {
-		    for (int j=0 ; j<clienti.get(i).getSpesa().size(); j++) {
-		     for (int n=0; n<clienti.get(i).getSpesa().get(j).getPro().size(); n++) {
-		      for (int k=0; k<catalogo.size();k++) {
-		       if(catalogo.get(k).getCodice() == clienti.get(i).getSpesa().get(j).getPro().get(n).getProdotto().getCodice()) {
-		        catalogo.get(k).riduciQuantita(clienti.get(i).getSpesa().get(j).getPro().get(n).getQta());
-		       }
-		       else
-		        return;
-		      }
-		     }
-		    }
-		   }*/
+		  
 		   c.getCarrelli().clear();
 		  }
 		  else {
 		  
 		  c.aggiungiSpesa(spesa);
 		  c.count();
-		 /* for (int i=0 ; i<clienti.size() ; i++) {
-		   for (int j=0 ; j<clienti.get(i).getSpesa().size(); j++) {
-		    for (int n=0; n<clienti.get(i).getSpesa().get(j).getPro().size(); n++) {
-		     for (int k=0; k<catalogo.size();k++) {
-		      if(catalogo.get(k).getCodice() == clienti.get(i).getSpesa().get(j).getPro().get(n).getProdotto().getCodice()) {
-		       catalogo.get(k).riduciQuantita(clienti.get(i).getSpesa().get(j).getPro().get(n).getQta());
-		      }
-		      else
-		       return;
-		     }
-		    }
-		   }
-		  }*/
+		
 		  c.getCarrelli().clear();
 		  clienti.add(c);
 		  }
